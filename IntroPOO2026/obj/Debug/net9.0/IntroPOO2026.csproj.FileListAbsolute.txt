@@ -1,0 +1,14 @@
+D:\Proyectos\UNIDEP\POO\2026\Intro\IntroPOO2026\bin\Debug\net9.0\IntroPOO2026.exe
+D:\Proyectos\UNIDEP\POO\2026\Intro\IntroPOO2026\bin\Debug\net9.0\IntroPOO2026.deps.json
+D:\Proyectos\UNIDEP\POO\2026\Intro\IntroPOO2026\bin\Debug\net9.0\IntroPOO2026.runtimeconfig.json
+D:\Proyectos\UNIDEP\POO\2026\Intro\IntroPOO2026\bin\Debug\net9.0\IntroPOO2026.dll
+D:\Proyectos\UNIDEP\POO\2026\Intro\IntroPOO2026\bin\Debug\net9.0\IntroPOO2026.pdb
+D:\Proyectos\UNIDEP\POO\2026\Intro\IntroPOO2026\obj\Debug\net9.0\IntroPOO2026.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\UNIDEP\POO\2026\Intro\IntroPOO2026\obj\Debug\net9.0\IntroPOO2026.AssemblyInfoInputs.cache
+D:\Proyectos\UNIDEP\POO\2026\Intro\IntroPOO2026\obj\Debug\net9.0\IntroPOO2026.AssemblyInfo.cs
+D:\Proyectos\UNIDEP\POO\2026\Intro\IntroPOO2026\obj\Debug\net9.0\IntroPOO2026.csproj.CoreCompileInputs.cache
+D:\Proyectos\UNIDEP\POO\2026\Intro\IntroPOO2026\obj\Debug\net9.0\IntroPOO2026.dll
+D:\Proyectos\UNIDEP\POO\2026\Intro\IntroPOO2026\obj\Debug\net9.0\refint\IntroPOO2026.dll
+D:\Proyectos\UNIDEP\POO\2026\Intro\IntroPOO2026\obj\Debug\net9.0\IntroPOO2026.pdb
+D:\Proyectos\UNIDEP\POO\2026\Intro\IntroPOO2026\obj\Debug\net9.0\IntroPOO2026.genruntimeconfig.cache
+D:\Proyectos\UNIDEP\POO\2026\Intro\IntroPOO2026\obj\Debug\net9.0\ref\IntroPOO2026.dll
