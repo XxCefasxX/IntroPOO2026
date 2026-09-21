@@ -1,18 +1,59 @@
 ﻿
 
+using IntroPOO2026.clases;
+using IntroPOO2026.repositorios;
 
-DateTime nacimiento = Convert.ToDateTime("1995/09/25");
-//Instancia de la clase Persona
-Persona persona = new Persona(name: "Juan", apellidoP: "Perez", apellidoM: "Hernandez", fechaNacimiento: nacimiento);
+Console.WriteLine("Menu:");
+Console.WriteLine("1-Empleados");
+Console.WriteLine("2-Productos");
+string o = Console.ReadLine();
+Console.WriteLine("Que movimiento realizara?");
+Console.WriteLine("R- Registrar");
+Console.WriteLine("B- Borrar");
+Console.WriteLine("A- Actualizar");
+string m=Console.ReadLine();
 
 
-DateTime nacimiento2 = Convert.ToDateTime("1995/09/14");
-Persona persona2 = new Persona(apellidoP: "Garcia", apellidoM: "Lopez", fechaNacimiento: nacimiento2, name: "Maria");
+switch (o)
+{
+    case "1":
+        RepositorioEmpleados repoempleados = new RepositorioEmpleados();
 
+        Empleado empleado = new Empleado();
 
-//Mostrar en pantalla los datos asignados
-Console.WriteLine($"la persona 1 es {persona.Name} {persona.ApellidoP} " +
-    $"{persona.ApellidoM} y tiene la edad de:{persona.Edad} años");
+        switch (m)
+        {
+            case "R":
 
-Console.WriteLine($"la persona 2 es {persona2.Name} {persona2.ApellidoP} " +
-    $"{persona2.ApellidoM} y tiene la edad de:{persona2.Edad} años");
+                empleado.Nombre = "";
+                empleado.Salario = 0;
+                empleado.ID = 0;
+                empleado.Edad = 0;
+
+                repoempleados.Registro(empleado);
+                break;
+
+            case "B":
+
+                empleado.ID = 0;
+
+                repoempleados.Borrar(empleado);
+                break;
+
+            case "A":
+                empleado.Nombre = "";
+                empleado.Salario = 0;
+                empleado.ID = 0;
+                empleado.Edad = 0;
+                repoempleados.Actualizar(empleado);
+                break;
+        }
+      
+
+        break;
+    case "2":
+        RepositorioProductos repoProductos = new RepositorioProductos();
+
+        break;
+}
+

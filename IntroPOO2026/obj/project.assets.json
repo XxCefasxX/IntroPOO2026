@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Proyectos\\UNIDEP\\POO\\2026\\Intro\\IntroPOO2026\\IntroPOO2026.csproj",
+      "projectUniqueName": "C:\\Users\\salaz\\OneDrive\\Escritorio\\unidep\\POO\\2026\\Bases\\IntroPOO2026\\IntroPOO2026\\IntroPOO2026.csproj",
       "projectName": "IntroPOO2026",
-      "projectPath": "D:\\Proyectos\\UNIDEP\\POO\\2026\\Intro\\IntroPOO2026\\IntroPOO2026.csproj",
+      "projectPath": "C:\\Users\\salaz\\OneDrive\\Escritorio\\unidep\\POO\\2026\\Bases\\IntroPOO2026\\IntroPOO2026\\IntroPOO2026.csproj",
       "packagesPath": "C:\\Users\\salaz\\.nuget\\packages\\",
-      "outputPath": "D:\\Proyectos\\UNIDEP\\POO\\2026\\Intro\\IntroPOO2026\\obj\\",
+      "outputPath": "C:\\Users\\salaz\\OneDrive\\Escritorio\\unidep\\POO\\2026\\Bases\\IntroPOO2026\\IntroPOO2026\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,6 +32,7 @@
         "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -74,7 +75,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
