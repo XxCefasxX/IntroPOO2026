@@ -24,11 +24,14 @@ switch (o)
         switch (m)
         {
             case "R":
-
-                empleado.Nombre = "";
-                empleado.Salario = 0;
+                Console.WriteLine("Nombre del empleado:");
+                empleado.Nombre = Console.ReadLine();
+                Console.WriteLine("Salario del empleado:");
+                empleado.Salario = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Edad del empleado:");
+                empleado.Edad = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("ID del empleado:");
                 empleado.ID = 0;
-                empleado.Edad = 0;
 
                 repoempleados.Registro(empleado);
                 break;
