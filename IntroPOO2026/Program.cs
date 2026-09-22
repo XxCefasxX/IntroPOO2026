@@ -31,23 +31,28 @@ switch (o)
                 Console.WriteLine("Edad del empleado:");
                 empleado.Edad = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("ID del empleado:");
-                empleado.ID = 0;
+                empleado.ID = Convert.ToInt32(Console.ReadLine());
 
                 repoempleados.Registro(empleado);
                 break;
 
             case "B":
 
-                empleado.ID = 0;
+                Console.WriteLine("ID del empleado:");
+                empleado.ID = Convert.ToInt32(Console.ReadLine()); 
 
                 repoempleados.Borrar(empleado);
                 break;
 
             case "A":
-                empleado.Nombre = "";
-                empleado.Salario = 0;
-                empleado.ID = 0;
-                empleado.Edad = 0;
+                Console.WriteLine("Nombre del empleado:");
+                empleado.Nombre = Console.ReadLine();
+                Console.WriteLine("Salario del empleado:");
+                empleado.Salario = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Edad del empleado:");
+                empleado.Edad = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("ID del empleado:");
+                empleado.ID = Convert.ToInt32(Console.ReadLine());
                 repoempleados.Actualizar(empleado);
                 break;
         }
@@ -56,7 +61,41 @@ switch (o)
         break;
     case "2":
         RepositorioProductos repoProductos = new RepositorioProductos();
+        Producto producto = new Producto();
+        switch (m)
+        {
+            case "R":
+                Console.WriteLine("Nombre del producto:");
+                producto.Nombre = Console.ReadLine();
+                Console.WriteLine("Precio del producto:");
+                producto.Precio = Convert.ToInt32(Console.ReadLine());
+               
+                Console.WriteLine("ID del producto:");
+                producto.ID = Convert.ToInt32(Console.ReadLine());
 
+                repoProductos.Registro(producto);
+                break;
+
+            case "B":
+
+            
+
+                Console.WriteLine("ID del producto:");
+                producto.ID = Convert.ToInt32(Console.ReadLine());
+
+                repoProductos.Registro(producto);
+                break;
+
+            case "A":
+                Console.WriteLine("Nombre del producto:");
+                producto.Nombre = Console.ReadLine();
+                Console.WriteLine("Precio del producto:");
+                producto.Precio = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("ID del producto:");
+                producto.ID = Convert.ToInt32(Console.ReadLine());
+                repoProductos.Registro(producto);
+                break;
+        }
         break;
 }
 
