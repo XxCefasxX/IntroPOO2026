@@ -11,7 +11,8 @@ Console.WriteLine("Que movimiento realizara?");
 Console.WriteLine("R- Registrar");
 Console.WriteLine("B- Borrar");
 Console.WriteLine("A- Actualizar");
-string m=Console.ReadLine();
+Console.WriteLine("V- Ver lista");
+string m=Console.ReadLine().ToUpper();
 
 
 switch (o)
@@ -20,9 +21,10 @@ switch (o)
         RepositorioEmpleados repoempleados = new RepositorioEmpleados();
 
         Empleado empleado = new Empleado();
-
+        List<Empleado> listaempelados = repoempleados.Lista();
         switch (m)
         {
+             
             case "R":
                 Console.WriteLine("Nombre del empleado:");
                 empleado.Nombre = Console.ReadLine();
@@ -30,14 +32,19 @@ switch (o)
                 empleado.Salario = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Edad del empleado:");
                 empleado.Edad = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("ID del empleado:");
-                empleado.ID = Convert.ToInt32(Console.ReadLine());
+                
 
                 repoempleados.Registro(empleado);
                 break;
 
             case "B":
 
+                Console.WriteLine("ID  |  Nombre  |  Edad  |  Salario");
+                foreach (Empleado empl in listaempelados)
+                {
+                    Console.WriteLine($"{empl.ID} | {empl.Nombre} | {empl.Edad} | ${empl.Salario}");
+
+                }
                 Console.WriteLine("ID del empleado:");
                 empleado.ID = Convert.ToInt32(Console.ReadLine()); 
 
@@ -45,6 +52,11 @@ switch (o)
                 break;
 
             case "A":
+                foreach (Empleado empl in listaempelados)
+                {
+                    Console.WriteLine($"{empl.ID}  {empl.Nombre} - {empl.Edad} - {empl.Salario}");
+
+                }
                 Console.WriteLine("Nombre del empleado:");
                 empleado.Nombre = Console.ReadLine();
                 Console.WriteLine("Salario del empleado:");
@@ -54,6 +66,15 @@ switch (o)
                 Console.WriteLine("ID del empleado:");
                 empleado.ID = Convert.ToInt32(Console.ReadLine());
                 repoempleados.Actualizar(empleado);
+                break;
+            case "V":
+               
+                for(int i = 0; i < listaempelados.Count; i++)
+                {
+                    Empleado empl = listaempelados[i];
+                    Console.WriteLine($"{empl.ID} - {empl.Nombre} - {empl.Edad} - {empl.Salario}");
+
+                }
                 break;
         }
       

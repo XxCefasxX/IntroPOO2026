@@ -21,9 +21,24 @@ namespace IntroPOO2026.repositorios
             Console.WriteLine("Producto borrado");
         }
 
+        public List<Producto> Buscar(string nombre)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Lista()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Registro(Producto producto)
         {
             Console.WriteLine("Producto registrado");
+        }
+
+        List<Producto> IRepository<Producto>.Lista()
+        {
+            throw new NotImplementedException();
         }
     }
 }
