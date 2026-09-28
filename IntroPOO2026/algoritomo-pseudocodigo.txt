@@ -1,0 +1,41 @@
+#Agregar productos a la venta
+---------Algoritmo-----------
+1- Pedir id del producto
+2- Pedir cantidad el producto
+3- Obtener precio del producto
+	3.1 - Obtenr informacion desde bd por medio del id del producto
+4- Calcular total de producto
+5- Añadir el producto a la lista
+6- Calcular Total de la venta
+7- Preguntar si agrega otro o cobrar
+8- Agregar otro: repetir paso 1-7
+9- Cobrar
+
+
+-------Algoritmo/PseudoCodigo------------
+1- Pedir id del producto
+	*Console.writeline() //mostrar mensaje pidiendo el id del producto
+	*int idproducto = console.readline() // guardar el id en una variable
+2- Pedir cantidad el producto
+	*Console.writeline() //mostrar mensaje pidiendo la cantidad del producto
+	*int cantidad = console.readline() // guardar la cntidad en una variable
+3- Obtener precio del producto
+	3.1 - Obtenr informacion desde bd por medio del id del producto
+		*ReporTienda.obtenerProducto()//por medio del id obtenr la informacion del prodcuto
+		*Producto prod= procutoonteenido// asignar la informaciona una instancia de producto
+4- Calcular total de producto
+	*totalprod= cantidad * pord.precio// se multiplica la cantidad ingresada por el precio del producto obtenido
+5- Añadir el producto a la lista
+	listaprodcto.add(producto, cantidad, total)// agregar a la lista el producto con sus datos
+6- Calcular Total de la venta
+	venta.total += totalpropducto// sumamos el total del producto a el total de la venta
+7- Preguntar si agrega otro o cobrar
+	console.writeline()//mensaje que desea hacer
+	console.writeline()//mensaje de opcion agregar
+	console.writeline()//mensaje de opcion cobrar
+	string i = console.readsline()// guardar la opcion en una variable
+	//validar la opcion elegida
+8- Agregar otro: repetir paso 1-7
+
+
+-------PseudoCodigo------------
