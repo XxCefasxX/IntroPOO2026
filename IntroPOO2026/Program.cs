@@ -121,7 +121,9 @@ switch (o)
                 //agregar productos a la venta
                 Console.WriteLine("Ingreese codigo de producto:");
                 int codigoProducto = Convert.ToInt32(Console.ReadLine());
-
+                //preguntar si agrega otro o cobrar
+                //si es agregar otro repetir pasos correspondientes
+                //si es cobrar solo mostrar mensaje cobrado
                 break;
         }
         break;
