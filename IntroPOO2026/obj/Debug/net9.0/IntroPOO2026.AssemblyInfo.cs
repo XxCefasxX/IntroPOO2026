@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IntroPOO2026")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c31bbbd47be93810bacb7939615a72b5419bad79")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+573b81b5d27f9ad450cc90e3cf0d6e82bef3bb57")]
 [assembly: System.Reflection.AssemblyProductAttribute("IntroPOO2026")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IntroPOO2026")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

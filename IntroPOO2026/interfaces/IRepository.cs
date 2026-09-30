@@ -12,5 +12,8 @@ namespace IntroPOO2026.interfaces
         public void Registro(T empleado);
         public void Actualizar(T empleado);
         public void Borrar(T empleado);
+        public List<T> Lista();
+        public List<T> Buscar(string nombre);
+        public T GetById(int id);
     }
 }

@@ -14,6 +14,24 @@ namespace IntroPOO2026.clases
         public Empleado empleado { get; set; }//empelado que antendio/realizo la venta
         public decimal total { get; set; }//total de la venta
 
+        public void AgregarProducto(Producto producto,int cantidad)
+        {
+            //calculamos el total del producto
+            decimal totalProducto = producto.Precio * cantidad;
 
+            //creamos instancia del producto a añadir a la lista
+            VentaProductos productoVendido = new VentaProductos();
+
+            //asignamos sus valores
+            productoVendido.producto = producto;
+            productoVendido.cantidad = cantidad;
+            productoVendido.total = totalProducto;
+
+            //agregamos el producto vendido a la lista
+            productos.Add(productoVendido);
+
+            //calculamos el total de la venta
+            total += totalProducto ;
+        }
     }
 }

@@ -11,7 +11,7 @@ Console.WriteLine("2-Productos");
 Console.WriteLine("3-Tienda");
 string o = Console.ReadLine();
 
-
+RepositorioProductos repoProductos = new RepositorioProductos();
 
 switch (o)
 {
@@ -20,11 +20,12 @@ switch (o)
         Console.WriteLine("R- Registrar");
         Console.WriteLine("B- Borrar");
         Console.WriteLine("A- Actualizar");
+        Console.WriteLine("V- Ver lista");
         string me = Console.ReadLine();
         RepositorioEmpleados repoempleados = new RepositorioEmpleados();
 
         Empleado empleado = new Empleado();
-
+        List<Empleado> listaempelados = repoempleados.Lista();
         switch (me)
         {
             case "R":
@@ -34,21 +35,30 @@ switch (o)
                 empleado.Salario = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Edad del empleado:");
                 empleado.Edad = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("ID del empleado:");
-                empleado.ID = Convert.ToInt32(Console.ReadLine());
+                
 
                 repoempleados.Registro(empleado);
                 break;
 
             case "B":
+                Console.WriteLine("ID  |  Nombre  |  Edad  |  Salario");
+                foreach (Empleado empl in listaempelados)
+                {
+                    Console.WriteLine($"{empl.ID} | {empl.Nombre} | {empl.Edad} | ${empl.Salario}");
 
+                }
                 Console.WriteLine("ID del empleado:");
-                empleado.ID = Convert.ToInt32(Console.ReadLine()); 
+                empleado.ID = Convert.ToInt32(Console.ReadLine());
 
                 repoempleados.Borrar(empleado);
                 break;
 
             case "A":
+                foreach (Empleado empl in listaempelados)
+                {
+                    Console.WriteLine($"{empl.ID}  {empl.Nombre} - {empl.Edad} - {empl.Salario}");
+
+                }
                 Console.WriteLine("Nombre del empleado:");
                 empleado.Nombre = Console.ReadLine();
                 Console.WriteLine("Salario del empleado:");
@@ -59,18 +69,31 @@ switch (o)
                 empleado.ID = Convert.ToInt32(Console.ReadLine());
                 repoempleados.Actualizar(empleado);
                 break;
+            case "V":
+
+                for (int i = 0; i < listaempelados.Count; i++)
+                {
+                    Empleado empl = listaempelados[i];
+                    Console.WriteLine($"{empl.ID} - {empl.Nombre} - {empl.Edad} - {empl.Salario}");
+
+                }
+                break;
         }
       
 
         break;
     case "2":
+
+        Producto producto = new Producto();
+
         Console.WriteLine("Que movimiento realizara?");
         Console.WriteLine("R- Registrar");
         Console.WriteLine("B- Borrar");
         Console.WriteLine("A- Actualizar");
+        Console.WriteLine("V- Ver lista");
         string mp = Console.ReadLine();
-        RepositorioProductos repoProductos = new RepositorioProductos();
-        Producto producto = new Producto();
+
+       
         switch (mp)
         {
             case "R":
@@ -78,7 +101,7 @@ switch (o)
                 producto.Nombre = Console.ReadLine();
                 Console.WriteLine("Precio del producto:");
                 producto.Precio = Convert.ToInt32(Console.ReadLine());
-               
+
                 Console.WriteLine("ID del producto:");
                 producto.ID = Convert.ToInt32(Console.ReadLine());
 
@@ -104,6 +127,14 @@ switch (o)
                 producto.ID = Convert.ToInt32(Console.ReadLine());
                 repoProductos.Registro(producto);
                 break;
+            case "V":
+                List<Producto> listaprod = repoProductos.Lista();
+
+                foreach (Producto prod in listaprod)
+                {
+                    Console.WriteLine($"{prod.ID} - {prod.Nombre} - ${prod.Precio} ");
+                }
+                break;
         }
         break;
     case "3":
@@ -111,19 +142,55 @@ switch (o)
         Console.WriteLine("V- Vender");
         Console.WriteLine("H- Historial");
         string mt = Console.ReadLine().ToUpper();
+        Console.Clear();
         switch (mt)
         {
             case "V":
-                Venta venta= new Venta();
+                string p = "P";
+                Venta venta = new Venta();
                 venta.codigoVenta = DateTime.Now.ToString("yyyyMMddss");
                 venta.fecha = DateTime.Now;
                 venta.empleado = usuario;
-                //agregar productos a la venta
-                Console.WriteLine("Ingreese codigo de producto:");
-                int codigoProducto = Convert.ToInt32(Console.ReadLine());
-                //preguntar si agrega otro o cobrar
-                //si es agregar otro repetir pasos correspondientes
-                //si es cobrar solo mostrar mensaje cobrado
+                while (p == "P")
+                {
+                    
+                    //agregar productos a la venta
+                    Console.WriteLine("Ingreese codigo de producto:");
+                    int codigoProducto = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Cantidad de producto:");
+                    int cantidad=Convert.ToInt32(Console.ReadLine());
+
+                    //obtenemos el producto por medio de su id
+                    Producto infoProduct = repoProductos.GetById(codigoProducto);
+
+                    venta.AgregarProducto(infoProduct, cantidad);
+
+                    //preguntar si agrega otro o cobrar
+                    Console.WriteLine("Desea agregar otro producto o Cobrar");
+                    Console.WriteLine("P- agregar otro producto");
+                    Console.WriteLine("C- Cobrar");
+                    p= Console.ReadLine().ToUpper();
+                    Console.Clear();
+            
+                }
+                Console.WriteLine("Cobrando...");
+                Console.WriteLine("producto---precio unitario-------cantidad--------------total");
+                foreach(VentaProductos prod in venta.productos)
+                {
+                    Console.WriteLine($"{prod.producto.Nombre}    " +
+                        $"${prod.producto.Precio}          " +
+                        $"{prod.cantidad}             " +
+                        $"${prod.total}");
+                }
+                Console.WriteLine($"Total: ${venta.total}");
+                //mostrar en pantalla detalles de la venta
+                /* producto---precio unitario-------cantidad--------------total
+                 * Manzanas       25                  2                    50.00
+                 * Queso          100                 1                    100.00
+                 * Total---------------------------------------------------150.00
+                */
+
+
                 break;
         }
         break;
