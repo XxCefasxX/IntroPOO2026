@@ -8,6 +8,10 @@ namespace IntroPOO2026.clases
 {
     internal class Venta
     {
+        public Venta()
+        {
+            productos = new List<VentaProductos>();
+        }
         public string codigoVenta { get; set; }//el numero/codigo de la venta
         public List<VentaProductos> productos { get; set; }//lista de productos
         public DateTime fecha { get; set; }//fecha de venta

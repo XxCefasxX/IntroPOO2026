@@ -12,6 +12,7 @@ Console.WriteLine("3-Tienda");
 string o = Console.ReadLine();
 
 RepositorioProductos repoProductos = new RepositorioProductos();
+ResitorioVentas repoVentas = new ResitorioVentas();
 
 switch (o)
 {
@@ -25,6 +26,7 @@ switch (o)
         RepositorioEmpleados repoempleados = new RepositorioEmpleados();
 
         Empleado empleado = new Empleado();
+        empleado.ID = 1;
         List<Empleado> listaempelados = repoempleados.Lista();
         switch (me)
         {
@@ -183,13 +185,21 @@ switch (o)
                         $"${prod.total}");
                 }
                 Console.WriteLine($"Total: ${venta.total}");
+                repoVentas.RegistraVenta(venta);
                 //mostrar en pantalla detalles de la venta
                 /* producto---precio unitario-------cantidad--------------total
                  * Manzanas       25                  2                    50.00
                  * Queso          100                 1                    100.00
                  * Total---------------------------------------------------150.00
                 */
-
+                //---------Guardar en base de datos las ventas---------
+                //con todos los datos
+                /*aqui es importante tomar en cuenta que son 2 tablas distintas,
+                 * una para la informacion de la venta
+                 * y otra para los detalles(lista de productos), estos deben de etar relacionados a la venta
+                 -------En el menu de ventas dar opcion de ver ventas
+                *ver la lista de ventas
+                 */
 
                 break;
         }

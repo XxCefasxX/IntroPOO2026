@@ -161,9 +161,9 @@ namespace IntroPOO2026.repositorios
         {
             Producto producto = new Producto();
 
-            List<Producto> lista = new List<Producto>();
             MySqlConnection conn = new MySqlConnection(connStr);
             MySqlCommand comm = new MySqlCommand("select * from productos where id=@ID", conn);
+            comm.Parameters.AddWithValue("@id", id);
             try
             {
 
@@ -174,12 +174,10 @@ namespace IntroPOO2026.repositorios
 
                     while (dr.Read())
                     {
-                        Producto prod = new Producto();
-                        prod.ID = Convert.ToInt32(dr["id"].ToString());
-                        prod.Nombre = dr["nombre"].ToString();
-                        prod.Precio = Convert.ToDecimal(dr["salario"].ToString());
+                        producto.ID = Convert.ToInt32(dr["id"].ToString());
+                        producto.Nombre = dr["nombre"].ToString();
+                        producto.Precio = Convert.ToDecimal(dr["precio"].ToString());
 
-                        lista.Add(prod);
                     }
                 }
                 dr.Close();
