@@ -11,5 +11,6 @@ namespace IntroPOO2026.interfaces
     {
         public void RegistraVenta(Venta venta);
         public void RegistraProductos(List<VentaProductos> productos, string codigoventa);
+        public int NextSale();
     }
 }

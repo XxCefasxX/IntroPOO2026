@@ -1,9 +1,10 @@
-﻿using System;
+﻿using IntroPOO2026.repositorios;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 namespace IntroPOO2026.clases
 {
     internal class Venta
@@ -17,32 +18,10 @@ namespace IntroPOO2026.clases
         }
         private string GeneraCodigoVenta()
         {
-            string codigo = DateTime.Now.ToString("yyyyMMdd");//20261001
-            string consulta = "select count(*)+1 from ventas where fecha=curdate()";
 
-            MySqlConnection conn = new MySqlConnection(Utils.connStr);
-            MySqlCommand comm = new MySqlCommand(consulta, conn);
-            int consecutivo = 0;
-            try
-            {
-                conn.Open();
-                MySqlDataReader dr= comm.ExecuteReader();
-                if (dr.Read()) 
-                {
+            ResitorioVentas repoVentas = new ResitorioVentas();
+            return DateTime.Now.ToString("yyyyMMdd") + repoVentas.NextSale().ToString("000");//20261005 + conseutivo de hoy
 
-                }
-                dr.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            codigo += consecutivo;
-            return codigo;
         }
         public string codigoVenta { get; set; }//el numero/codigo de la venta
         public List<VentaProductos> productos { get; set; }//lista de productos
@@ -50,7 +29,7 @@ namespace IntroPOO2026.clases
         public Empleado empleado { get; set; }//empelado que antendio/realizo la venta
         public decimal total { get; set; }//total de la venta
 
-        public void AgregarProducto(Producto producto,int cantidad)
+        public void AgregarProducto(Producto producto, int cantidad)
         {
             //calculamos el total del producto
             decimal totalProducto = producto.Precio * cantidad;
@@ -67,7 +46,7 @@ namespace IntroPOO2026.clases
             productos.Add(productoVendido);
 
             //calculamos el total de la venta
-            total += totalProducto ;
+            total += totalProducto;
         }
     }
 }

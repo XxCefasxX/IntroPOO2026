@@ -113,5 +113,35 @@ namespace IntroPOO2026.repositorios
                 conn.Close();
             }
         }
+
+        public int NextSale()
+        {
+            string consulta = "select count(*)+1 as next from ventas where fecha=curdate()";
+            MySql.Data.MySqlClient.MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection(Utils.connStr);
+            MySql.Data.MySqlClient.MySqlCommand comm = new MySql.Data.MySqlClient.MySqlCommand(consulta, conn);
+            int consecutivo = 0;
+            try
+            {
+                conn.Open();
+                MySql.Data.MySqlClient.MySqlDataReader dr = comm.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        consecutivo = Convert.ToInt32(dr["next"].ToString());
+                    }
+                }
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return consecutivo;
+        }
     }
 }
