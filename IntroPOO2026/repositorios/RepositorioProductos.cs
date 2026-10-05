@@ -13,10 +13,10 @@ namespace IntroPOO2026.repositorios
     {
 
 
-        string connStr = "server=127.0.0.1;uid=root;pwd=123456;database=poo";
+        
         public void Actualizar(Producto producto)
         {
-            MySqlConnection conn = new MySqlConnection(connStr);
+            MySqlConnection conn = new MySqlConnection(Utils.connStr);
             MySqlCommand comm = new MySqlCommand("update productos set nombre=@nombre, precio=@precio where id=@id);", conn);
             comm.Parameters.AddWithValue("@nombre", producto.Nombre);
             comm.Parameters.AddWithValue("@salario", producto.Precio);
@@ -40,7 +40,7 @@ namespace IntroPOO2026.repositorios
 
         public void Borrar(Producto producto)
         {
-            MySqlConnection conn = new MySqlConnection(connStr);
+            MySqlConnection conn = new MySqlConnection(Utils.connStr);
             MySqlCommand comm = new MySqlCommand("delete from productos where id=@id", conn);
             comm.Parameters.AddWithValue("@ID", producto.ID);
             try
@@ -63,7 +63,7 @@ namespace IntroPOO2026.repositorios
         public List<Producto> Buscar(string nombre)
         {
             List<Producto> lista = new List<Producto>();
-            MySqlConnection conn = new MySqlConnection(connStr);
+            MySqlConnection conn = new MySqlConnection(Utils.connStr);
             MySqlCommand comm = new MySqlCommand("select * from productos", conn);
             try
             {
@@ -99,7 +99,7 @@ namespace IntroPOO2026.repositorios
         public List<Producto> Lista()
         {
             List<Producto> lista = new List<Producto>();
-            MySqlConnection conn = new MySqlConnection(connStr);
+            MySqlConnection conn = new MySqlConnection(Utils.connStr);
             MySqlCommand comm = new MySqlCommand("select * from productos", conn);
             try
             {
@@ -134,7 +134,7 @@ namespace IntroPOO2026.repositorios
 
         public void Registro(Producto producto)
         {
-            MySqlConnection conn = new MySqlConnection(connStr);
+            MySqlConnection conn = new MySqlConnection(Utils.connStr);
             MySqlCommand comm = new MySqlCommand("insert into productos(nombre,precio) values(@nombre,@precio);", conn);
             comm.Parameters.AddWithValue("@nombre", producto.Nombre);
             comm.Parameters.AddWithValue("@precio", producto.Precio);
@@ -161,7 +161,7 @@ namespace IntroPOO2026.repositorios
         {
             Producto producto = new Producto();
 
-            MySqlConnection conn = new MySqlConnection(connStr);
+            MySqlConnection conn = new MySqlConnection(Utils.connStr);
             MySqlCommand comm = new MySqlCommand("select * from productos where id=@ID", conn);
             comm.Parameters.AddWithValue("@id", id);
             try

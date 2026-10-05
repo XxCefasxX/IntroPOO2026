@@ -12,10 +12,10 @@ namespace IntroPOO2026.repositorios
 {
     internal class RepositorioEmpleados : IRepository<Empleado>
     {
-        string connStr = "server=127.0.0.1;uid=root;pwd=123456;database=poo";
+
         public void Actualizar(Empleado empleado)
         {
-            MySqlConnection conn = new MySqlConnection(connStr);
+            MySqlConnection conn = new MySqlConnection(Utils.connStr);
             MySqlCommand comm = new MySqlCommand("update empelados set nombre=@nombre, salario=@salario,edad=@edad where id=@id);", conn);
             comm.Parameters.AddWithValue("@nombre", empleado.Nombre);
             comm.Parameters.AddWithValue("@salario", empleado.Salario);
@@ -41,7 +41,7 @@ namespace IntroPOO2026.repositorios
 
         public void Borrar(Empleado empleado)
         {
-            MySqlConnection conn = new MySqlConnection(connStr);
+            MySqlConnection conn = new MySqlConnection(Utils.connStr);
             MySqlCommand comm = new MySqlCommand("delete from empleados where id=@id", conn);
             comm.Parameters.AddWithValue("@ID", empleado.ID);
             try
@@ -64,7 +64,7 @@ namespace IntroPOO2026.repositorios
         public List<Empleado> Buscar(string nombre)
         {
             List<Empleado> lista = new List<Empleado>();
-            MySqlConnection conn = new MySqlConnection(connStr);
+            MySqlConnection conn = new MySqlConnection(Utils.connStr);
             MySqlCommand comm = new MySqlCommand("select * from empelados where nombre like '%'@nombre'%'", conn);
             comm.Parameters.AddWithValue("@nombre", nombre);
             try
@@ -102,7 +102,7 @@ namespace IntroPOO2026.repositorios
         public List<Empleado> Lista()
         {
             List<Empleado> lista = new List<Empleado>();
-            MySqlConnection conn = new MySqlConnection(connStr);
+            MySqlConnection conn = new MySqlConnection(Utils.connStr);
             MySqlCommand comm = new MySqlCommand("select * from empelados", conn);
             try
             {
@@ -139,7 +139,7 @@ namespace IntroPOO2026.repositorios
 
         public void Registro(Empleado empleado)
         {
-            MySqlConnection conn = new MySqlConnection(connStr);
+            MySqlConnection conn = new MySqlConnection(Utils.connStr);
             MySqlCommand comm = new MySqlCommand("insert into empleados(nombre,salario,edad) values(@nombre,@salario,@edad);", conn);
             comm.Parameters.AddWithValue("@nombre", empleado.Nombre);
             comm.Parameters.AddWithValue("@salario", empleado.Salario);

@@ -1,9 +1,11 @@
 ﻿
 
+using IntroPOO2026;
 using IntroPOO2026.clases;
 using IntroPOO2026.repositorios;
 
 Empleado usuario = new Empleado();
+usuario.ID = 1;
 
 Console.WriteLine("Menu:");
 Console.WriteLine("1-Empleados");
@@ -149,10 +151,10 @@ switch (o)
         {
             case "V":
                 string p = "P";
-                Venta venta = new Venta();
-                venta.codigoVenta = DateTime.Now.ToString("yyyyMMddss");
-                venta.fecha = DateTime.Now;
-                venta.empleado = usuario;
+                Venta venta = new Venta(usuario);
+               
+                
+                
                 while (p == "P")
                 {
                     

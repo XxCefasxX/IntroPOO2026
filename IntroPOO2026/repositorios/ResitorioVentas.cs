@@ -13,10 +13,10 @@ namespace IntroPOO2026.repositorios
 {
     internal class ResitorioVentas : IVentasRepository
     {
-        string connStr = "server=127.0.0.1;uid=root;pwd=123456;database=poo;;AllowLoadLocalInfile=true;";
+        //string connStr = "server=127.0.0.1;uid=root;pwd=123456;database=poo;;AllowLoadLocalInfile=true;";
         public void RegistraProductos(List<VentaProductos> productos, string codigoventa)
         {
-            MySql.Data.MySqlClient.MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection(connStr);
+            MySql.Data.MySqlClient.MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection(Utils.connStr);
 
             string values = "";
             foreach (VentaProductos producto in productos)
@@ -46,7 +46,7 @@ namespace IntroPOO2026.repositorios
 
         public async void metodo2(List<VentaProductos> productos, string codigoventa)
         {
-            MySqlConnector.MySqlConnection conn = new MySqlConnector.MySqlConnection(connStr);
+            MySqlConnector.MySqlConnection conn = new MySqlConnector.MySqlConnection(Utils.connStr);
             var bulkCopy = new MySqlBulkCopy(conn);
 
             bulkCopy.DestinationTableName = "venta_productos";
@@ -90,7 +90,7 @@ namespace IntroPOO2026.repositorios
         {
 
 
-            MySql.Data.MySqlClient.MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection(connStr);
+            MySql.Data.MySqlClient.MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection(Utils.connStr);
             MySql.Data.MySqlClient.MySqlCommand comm = new MySql.Data.MySqlClient.MySqlCommand("Insert into ventas(codigoventa,idempleado,fecha,total) values(@codigo,@empleado,@fecha,@total);", conn);
             comm.Parameters.AddWithValue("@codigo", venta.codigoVenta);
             comm.Parameters.AddWithValue("@empleado", venta.empleado.ID);
