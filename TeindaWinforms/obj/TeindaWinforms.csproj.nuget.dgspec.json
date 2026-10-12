@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\salaz\\OneDrive\\Escritorio\\unidep\\POO\\2026\\tienda\\IntroPOO2026\\TeindaWinforms\\TeindaWinforms.csproj": {}
+    "C:\\Users\\lakms\\Downloads\\Tareas\\Programacion Orientada a Objetos\\Prueba\\TeindaWinforms\\TeindaWinforms.csproj": {}
   },
   "projects": {
-    "C:\\Users\\salaz\\OneDrive\\Escritorio\\unidep\\POO\\2026\\tienda\\IntroPOO2026\\Core\\Core.csproj": {
+    "C:\\Users\\lakms\\Downloads\\Tareas\\Programacion Orientada a Objetos\\Prueba\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\salaz\\OneDrive\\Escritorio\\unidep\\POO\\2026\\tienda\\IntroPOO2026\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\lakms\\Downloads\\Tareas\\Programacion Orientada a Objetos\\Prueba\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\salaz\\OneDrive\\Escritorio\\unidep\\POO\\2026\\tienda\\IntroPOO2026\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\salaz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\salaz\\OneDrive\\Escritorio\\unidep\\POO\\2026\\tienda\\IntroPOO2026\\Core\\obj\\",
+        "projectPath": "C:\\Users\\lakms\\Downloads\\Tareas\\Programacion Orientada a Objetos\\Prueba\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\lakms\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lakms\\Downloads\\Tareas\\Programacion Orientada a Objetos\\Prueba\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\salaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lakms\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -82,20 +81,20 @@
         }
       }
     },
-    "C:\\Users\\salaz\\OneDrive\\Escritorio\\unidep\\POO\\2026\\tienda\\IntroPOO2026\\TeindaWinforms\\TeindaWinforms.csproj": {
+    "C:\\Users\\lakms\\Downloads\\Tareas\\Programacion Orientada a Objetos\\Prueba\\TeindaWinforms\\TeindaWinforms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\salaz\\OneDrive\\Escritorio\\unidep\\POO\\2026\\tienda\\IntroPOO2026\\TeindaWinforms\\TeindaWinforms.csproj",
+        "projectUniqueName": "C:\\Users\\lakms\\Downloads\\Tareas\\Programacion Orientada a Objetos\\Prueba\\TeindaWinforms\\TeindaWinforms.csproj",
         "projectName": "TeindaWinforms",
-        "projectPath": "C:\\Users\\salaz\\OneDrive\\Escritorio\\unidep\\POO\\2026\\tienda\\IntroPOO2026\\TeindaWinforms\\TeindaWinforms.csproj",
-        "packagesPath": "C:\\Users\\salaz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\salaz\\OneDrive\\Escritorio\\unidep\\POO\\2026\\tienda\\IntroPOO2026\\TeindaWinforms\\obj\\",
+        "projectPath": "C:\\Users\\lakms\\Downloads\\Tareas\\Programacion Orientada a Objetos\\Prueba\\TeindaWinforms\\TeindaWinforms.csproj",
+        "packagesPath": "C:\\Users\\lakms\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lakms\\Downloads\\Tareas\\Programacion Orientada a Objetos\\Prueba\\TeindaWinforms\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\salaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lakms\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -104,7 +103,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -112,8 +110,8 @@
             "framework": "net9.0-windows7.0",
             "targetAlias": "net9.0-windows",
             "projectReferences": {
-              "C:\\Users\\salaz\\OneDrive\\Escritorio\\unidep\\POO\\2026\\tienda\\IntroPOO2026\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\salaz\\OneDrive\\Escritorio\\unidep\\POO\\2026\\tienda\\IntroPOO2026\\Core\\Core.csproj"
+              "C:\\Users\\lakms\\Downloads\\Tareas\\Programacion Orientada a Objetos\\Prueba\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\lakms\\Downloads\\Tareas\\Programacion Orientada a Objetos\\Prueba\\Core\\Core.csproj"
               }
             }
           }
