@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Core.clases
 {
+    //CAMBIOS DE ADRIANAAAA :3
     public class Venta
     {
         public string codigoVenta { get;  }//el numero/codigo de la venta
@@ -51,3 +52,5 @@ namespace Core.clases
         }
     }
 }
+
+
