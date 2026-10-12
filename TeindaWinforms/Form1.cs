@@ -48,7 +48,8 @@ namespace TeindaWinforms
             repoVenta.RegistraVenta(venta);
             dgv_lista.DataSource = null;
             lb_total.Text = "";
-            MessageBox.Show("Venta realizada");
+            MessageBox.Show("Venta copletada");
+            //rear su rama y trabajar ahi
         }
     }
 }
