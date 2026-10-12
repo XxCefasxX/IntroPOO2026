@@ -1,8 +1,10 @@
 ﻿
 
-using IntroPOO2026;
-using IntroPOO2026.clases;
-using IntroPOO2026.repositorios;
+
+using Core;
+using Core.clases;
+using Core.repositorios;
+
 
 Empleado usuario = new Empleado();
 usuario.ID = 1;
@@ -203,6 +205,10 @@ switch (o)
                 *ver la lista de ventas
                  */
 
+                break;
+            case "H":
+                //mostrar lista de ventas de la ms nueva a la mas antigua
+                //elegir una y mostrar los productos de esa venta
                 break;
         }
         break;

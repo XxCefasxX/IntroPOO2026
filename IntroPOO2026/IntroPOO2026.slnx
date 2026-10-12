@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="../Core/Core.csproj" Id="8b34c5fa-b328-4e38-b006-8bb1141ccebd" />
+  <Project Path="../TeindaWinforms/TeindaWinforms.csproj" Id="db92126a-9558-4144-966f-4b26ead449c6" />
   <Project Path="IntroPOO2026.csproj" />
 </Solution>
