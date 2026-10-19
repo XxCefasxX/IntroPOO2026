@@ -195,7 +195,14 @@ namespace Core.repositorios
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                RepositorioLogs logs = new RepositorioLogs();
+                Log log = new Log();
+                log.fecha = DateTime.Now;
+                log.ex = ex;
+                log.empleado = new Empleado();
+                log.tipo = 1;
+                logs.Registro(log);
+
                 response.Code = 0;
                 response.Message = $"Ocurrio un error, {ex.Message}";
                 response.Data = null;

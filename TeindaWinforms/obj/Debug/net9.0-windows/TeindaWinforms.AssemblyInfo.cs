@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TeindaWinforms")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ca54b97c12ffaf647dfb202c6cb0fb6b861e0ff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb61f6c08cccbfa63edbd91d3c7cf245a92f8e85")]
 [assembly: System.Reflection.AssemblyProductAttribute("TeindaWinforms")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TeindaWinforms")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

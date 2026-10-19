@@ -25,7 +25,7 @@ namespace TeindaWinforms
                 venta.AgregarProducto(producInfo, cantidad);
 
                 dgv_lista.DataSource = venta.productos;
-               
+
                 lb_total.Text = venta.total.ToString();
             }
             else if (response.Code == 2)
@@ -34,6 +34,7 @@ namespace TeindaWinforms
             }
             else
             {
+
                 MessageBox.Show("Ocurrio un error");
             }
 
@@ -41,7 +42,7 @@ namespace TeindaWinforms
             tb_cantidad.Text = "";
         }
 
-  
+
         private void PagarCuenta(object sender, EventArgs e)
         {
             ResitorioVentas repoVenta = new ResitorioVentas();
@@ -49,7 +50,30 @@ namespace TeindaWinforms
             dgv_lista.DataSource = null;
             lb_total.Text = "";
             MessageBox.Show("Venta copletada");
-            //rear su rama y trabajar ahi
+            //=rear su rama y trabajar ahi
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //images/platillos/menudo.jpg
+            System.Drawing.Image img = null;
+            pcbimg.Image = img;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Pantalla2 pantalla2 = new Pantalla2("Prueba");
+
+            pantalla2.Show();
+
+
+        }
+
+        private void pantalla2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Pantalla2 pantalla2 = new Pantalla2("Prueba");
+
+            pantalla2.Show();
         }
     }
 }

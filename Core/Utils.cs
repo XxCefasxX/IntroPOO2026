@@ -8,6 +8,6 @@ namespace Core
 {
     internal static class Utils
     {
-        public static string connStr = "server=192.168.1.83;uid=root;pwd=123456;database=poo";
+        public static string connStr = "server=127.0.0.1;uid=root;pwd=123456;database=poo";
     }
 }
