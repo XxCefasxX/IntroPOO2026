@@ -193,6 +193,12 @@ namespace Core.repositorios
                 }
                 dr.Close();
             }
+            //se detecta error de mysql/ relacionado con la bd primero
+            catch (MySqlException ex)
+            {
+
+            }
+            //si no es error de mysql cacha el error aqui
             catch (Exception ex)
             {
                 RepositorioLogs logs = new RepositorioLogs();
